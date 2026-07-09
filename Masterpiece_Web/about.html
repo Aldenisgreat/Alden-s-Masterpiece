@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Vibe Coding Playground</title>
+  <meta name="description" content="Learn about the developer behind Vibe Coding Playground.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-orb bg-orb--4"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-code-char" style="left: 10%; animation-delay: -4s; animation-duration: 21s;">about.alden()</div>
+    <div class="bg-code-char" style="left: 35%; animation-delay: -8s; animation-duration: 19s;">learn(&quot;vibe coding&quot;)</div>
+    <div class="bg-code-char" style="left: 60%; animation-delay: -1s; animation-duration: 23s;">AI.copilot.enable()</div>
+    <div class="bg-code-char" style="left: 85%; animation-delay: -12s; animation-duration: 18s;">skills.levelUp()</div>
+  </div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo"><span>VIBE</span> CODING</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__avatar fade-in">AW</div>
+        <div class="section__tag fade-in">// ABOUT</div>
+        <h1 class="page-header__title fade-in" style="margin-top: 16px;">Alden Wang</h1>
+        <p class="about-bio fade-in">
+          Hi, I'm Alden. I'm learning about vibe coding with AI — using AI tools to help me build
+          web apps and games faster than ever before. This playground is where I experiment,
+          ship projects, and discover what's possible when you let AI handle the heavy lifting
+          while you focus on the ideas.
+        </p>
+      </div>
+    </section>
+
+    <!-- What is Vibe Coding -->
+    <section class="section" style="background: var(--bg-secondary); border-top: var(--border-subtle); border-bottom: var(--border-subtle);">
+      <div class="container">
+        <div class="about-snippet">
+          <div class="about-snippet__text fade-in-left">
+            <h3>What is Vibe Coding?</h3>
+            <p>
+              Vibe coding is a new way of building software where you describe what you want
+              and AI writes the code. Instead of typing every line by hand, you focus on the
+              vision, the design, and the experience — and let AI be your pair programmer.
+              It's faster, more creative, and a lot more fun.
+            </p>
+          </div>
+          <div class="about-snippet__visual fade-in-right">
+            <span class="about-snippet__visual-text">&lt;/&gt;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header fade-in">
+          <div class="section__tag">// TOOLS & SKILLS</div>
+          <h2 class="section__title">Stack</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <span class="skill-card__icon">&#x1F916;</span>
+            <h3 class="skill-card__title">AI Tools</h3>
+            <ul class="skill-card__list">
+              <li>Trae IDE</li>
+              <li>ChatGPT / Claude</li>
+              <li>Copilot</li>
+              <li>AI Code Generation</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <span class="skill-card__icon">&#x1F3A8;</span>
+            <h3 class="skill-card__title">Frontend</h3>
+            <ul class="skill-card__list">
+              <li>HTML / CSS / JavaScript</li>
+              <li>Responsive Design</li>
+              <li>CSS Animations</li>
+              <li>Web Games</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <span class="skill-card__icon">&#x1F4BB;</span>
+            <h3 class="skill-card__title">Development</h3>
+            <ul class="skill-card__list">
+              <li>Git & GitHub</li>
+              <li>VS Code / Trae</li>
+              <li>Terminal / CLI</li>
+              <li>Debugging with AI</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <span class="skill-card__icon">&#x1F680;</span>
+            <h3 class="skill-card__title">Learning</h3>
+            <ul class="skill-card__list">
+              <li>Prompt Engineering</li>
+              <li>Full-Stack Development</li>
+              <li>Game Design</li>
+              <li>AI Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section class="section" style="background: var(--bg-secondary); border-top: var(--border-subtle); border-bottom: var(--border-subtle);">
+      <div class="container">
+        <div class="section__header fade-in">
+          <div class="section__tag">// JOURNEY</div>
+          <h2 class="section__title">Timeline</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item fade-in">
+            <div class="timeline__year">2026</div>
+            <h3 class="timeline__title">Ghost Images</h3>
+            <p class="timeline__desc">
+              Created an educational video explaining the phenomenon of ghost images —
+              those faint, transparent duplicates that sometimes appear in your vision.
+              A dive into the science of visual perception.
+            </p>
+          </div>
+          <div class="timeline__item fade-in">
+            <div class="timeline__year">2026</div>
+            <h3 class="timeline__title">Tomato Clock</h3>
+            <p class="timeline__desc">
+              Built a clean, minimalist Pomodoro timer web app to help users stay focused.
+              A productivity tool with a beautiful interface and satisfying timer experience.
+            </p>
+          </div>
+          <div class="timeline__item fade-in">
+            <div class="timeline__year">2025</div>
+            <h3 class="timeline__title">Sky Touchdown</h3>
+            <p class="timeline__desc">
+              Built an immersive aerial web game with dynamic sky environments and
+              fast-paced flight physics. A step into browser-based game development.
+            </p>
+          </div>
+          <div class="timeline__item fade-in">
+            <div class="timeline__year">2024</div>
+            <h3 class="timeline__title">Started the Journey</h3>
+            <p class="timeline__desc">
+              Started learning vibe coding with AI. Built first projects using AI-assisted
+              development and discovered how fast you can go when AI is your copilot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      <div class="status-bar__item"><span class="status-bar__dot"></span> Online</div>
+      <div class="status-bar__item">3 Projects</div>
+    </div>
+    <div class="status-bar__right">
+      <div class="status-bar__item">Vibe Coding v1.0</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="margin-bottom: 28px;">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Vibe Coding Playground. Built with <span>&lt;code&gt;</span> and curiosity.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matrix-rain.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Vibe Coding Playground</title>
+  <meta name="description" content="Screenshots, concept art, and behind-the-scenes visuals from AI game projects.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-orb bg-orb--4"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-code-char" style="left: 20%; animation-delay: -2s; animation-duration: 20s;">screenshot.capture()</div>
+    <div class="bg-code-char" style="left: 55%; animation-delay: -9s; animation-duration: 18s;">gallery.add(img)</div>
+    <div class="bg-code-char" style="left: 75%; animation-delay: -5s; animation-duration: 22s;">render(&lt;Grid /&gt;)</div>
+  </div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo"><span>VIBE</span> CODING</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <div class="section__tag fade-in">// VISUALS</div>
+        <h1 class="page-header__title fade-in">Gallery</h1>
+        <p class="page-header__desc fade-in">Screenshots, concept art, and behind-the-scenes moments from AI game projects.</p>
+      </div>
+    </div>
+
+    <!-- Filter Tags -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <!-- Filter Tags -->
+        <div class="gallery-filters fade-in">
+          <button class="gallery-filter active" data-filter="all">All</button>
+          <button class="gallery-filter" data-filter="sky">Sky Touchdown</button>
+          <button class="gallery-filter" data-filter="tomato">Tomato Clock</button>
+          <button class="gallery-filter" data-filter="ghost">Ghost Images</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+          <!-- Sky Touchdown -->
+          <a href="http://localhost:3004/" target="_blank" class="gallery-item gallery-item--wide fade-in" data-category="sky">
+            <div class="gallery-item__img gallery-item__img--sky-1">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Sky Touchdown</span>
+                <span class="gallery-item__caption">An immersive aerial game — play now</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Sky Touchdown gallery items -->
+          <a href="http://localhost:3004/" target="_blank" class="gallery-item gallery-item--tall fade-in" data-category="sky">
+            <div class="gallery-item__img gallery-item__img--sky-2">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Sky Touchdown</span>
+                <span class="gallery-item__caption">Aerial gameplay screenshot — play now</span>
+              </div>
+            </div>
+          </a>
+          <a href="http://localhost:3004/" target="_blank" class="gallery-item fade-in" data-category="sky">
+            <div class="gallery-item__img gallery-item__img--sky-3">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Sky Touchdown</span>
+                <span class="gallery-item__caption">Dynamic sky environment</span>
+              </div>
+            </div>
+          </a>
+          <a href="http://localhost:3004/" target="_blank" class="gallery-item fade-in" data-category="sky">
+            <div class="gallery-item__img gallery-item__img--sky-4">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Sky Touchdown</span>
+                <span class="gallery-item__caption">Touchdown scoring moment</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Tomato Clock -->
+          <a href="http://localhost:5212/" target="_blank" class="gallery-item gallery-item--wide fade-in" data-category="tomato">
+            <div class="gallery-item__img gallery-item__img--tomato-1">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Tomato Clock</span>
+                <span class="gallery-item__caption">Main timer interface — try it now</span>
+              </div>
+            </div>
+          </a>
+          <a href="http://localhost:5212/" target="_blank" class="gallery-item fade-in" data-category="tomato">
+            <div class="gallery-item__img gallery-item__img--tomato-2">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Tomato Clock</span>
+                <span class="gallery-item__caption">Session tracking view</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Ghost Images -->
+          <a href="http://localhost:5174/?auto=1" target="_blank" class="gallery-item gallery-item--wide fade-in" data-category="ghost">
+            <div class="gallery-item__img gallery-item__img--ghost-1">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Ghost Images</span>
+                <span class="gallery-item__caption">Exploring the science of visual perception — watch now</span>
+              </div>
+            </div>
+          </a>
+          <a href="http://localhost:5174/?auto=1" target="_blank" class="gallery-item fade-in" data-category="ghost">
+            <div class="gallery-item__img gallery-item__img--ghost-2">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Ghost Images</span>
+                <span class="gallery-item__caption">How light creates phantom duplicates in your vision</span>
+              </div>
+            </div>
+          </a>
+          <a href="http://localhost:5174/?auto=1" target="_blank" class="gallery-item fade-in" data-category="ghost">
+            <div class="gallery-item__img gallery-item__img--ghost-3">
+              <div class="gallery-item__overlay">
+                <span class="gallery-item__project">Ghost Images</span>
+                <span class="gallery-item__caption">Understanding the science behind visual perception</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      <div class="status-bar__item"><span class="status-bar__dot"></span> Online</div>
+      <div class="status-bar__item">11 Photos</div>
+    </div>
+    <div class="status-bar__right">
+      <div class="status-bar__item">Vibe Coding v1.0</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="margin-bottom: 28px;">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Vibe Coding Playground. Built with <span>&lt;code&gt;</span> and curiosity.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matrix-rain.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Vibe Coding Playground</title>
+  <meta name="description" content="Explore AI-powered game projects: procedural generation, neural networks, adaptive gameplay, and more.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-orb bg-orb--4"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-code-char" style="left: 15%; animation-delay: -3s; animation-duration: 19s;">const project = await AI()</div>
+    <div class="bg-code-char" style="left: 40%; animation-delay: -7s; animation-duration: 21s;">ship_it()</div>
+    <div class="bg-code-char" style="left: 65%; animation-delay: -11s; animation-duration: 23s;">&lt;Component /&gt;</div>
+    <div class="bg-code-char" style="left: 80%; animation-delay: -1s; animation-duration: 20s;">deploy --prod</div>
+  </div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo"><span>VIBE</span> CODING</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <div class="section__tag fade-in">// PORTFOLIO</div>
+        <h1 class="page-header__title fade-in">All Projects</h1>
+        <p class="page-header__desc fade-in">Three projects built and live — try them out.</p>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="projects-grid">
+
+          <!-- Project 1: Sky Touchdown -->
+          <div class="project-card fade-in">
+            <div class="project-card__image project-card__image--sky"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Sky Touchdown</h3>
+              <p class="project-card__desc">
+                An immersive aerial game where players pilot through dynamic skies,
+                navigating obstacles and scoring touchdowns in thrilling aerial maneuvers.
+                Fast-paced action with smooth flight physics.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Web Game</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Canvas</span>
+              </div>
+              <a href="http://localhost:3004/" target="_blank" class="project-card__link">Play Now</a>
+            </div>
+          </div>
+
+          <!-- Project 4: Tomato Clock -->
+          <div class="project-card fade-in">
+            <div class="project-card__image project-card__image--tomato"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Tomato Clock</h3>
+              <p class="project-card__desc">
+                A clean, minimalist Pomodoro timer web app that helps you stay focused and productive.
+                Track your work sessions with a beautiful interface and satisfying tomato-themed timer.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Productivity</span>
+                <span class="tag">Web App</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a href="http://localhost:5212/" target="_blank" class="project-card__link">Try It Now</a>
+            </div>
+          </div>
+
+          <!-- Project 5: Ghost Images -->
+          <div class="project-card fade-in">
+            <div class="project-card__image project-card__image--ghost"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Ghost Images</h3>
+              <p class="project-card__desc">
+                An educational video explaining the phenomenon of ghost images — those faint,
+                transparent duplicates that sometimes appear in your vision. Covers the science
+                behind optical illusions and how your eyes perceive light.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Video</span>
+                <span class="tag">Science</span>
+                <span class="tag">Educational</span>
+              </div>
+              <a href="http://localhost:5174/?auto=1" target="_blank" class="project-card__link">Watch Video</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      <div class="status-bar__item"><span class="status-bar__dot"></span> Online</div>
+      <div class="status-bar__item">3 Projects</div>
+    </div>
+    <div class="status-bar__right">
+      <div class="status-bar__item">Vibe Coding v1.0</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="margin-bottom: 28px;">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Vibe Coding Playground. Built with <span>&lt;code&gt;</span> and curiosity.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matrix-rain.js"></script>
+</body>
+</html>

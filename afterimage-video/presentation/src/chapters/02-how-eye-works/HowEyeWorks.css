@@ -1,0 +1,595 @@
+.hew-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* ── Step 0: Camera analogy ── */
+.hew-camera-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 240px;
+}
+
+.hew-camera-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 12px var(--accent-glow));
+  animation: hew-camera-appear 0.8s ease-out;
+}
+
+@keyframes hew-camera-appear {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.hew-light-incoming {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+}
+
+.hew-ray {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--accent));
+  transform-origin: right center;
+  animation: hew-ray-fly 1.5s ease-in-out infinite;
+}
+
+.hew-ray-0 { transform: translateY(-30px) rotate(15deg); animation-delay: 0s; }
+.hew-ray-1 { transform: translateY(-15px) rotate(7deg); animation-delay: 0.15s; }
+.hew-ray-2 { transform: translateY(0); animation-delay: 0.3s; }
+.hew-ray-3 { transform: translateY(15px) rotate(-7deg); animation-delay: 0.45s; }
+.hew-ray-4 { transform: translateY(30px) rotate(-15deg); animation-delay: 0.6s; }
+
+@keyframes hew-ray-fly {
+  0%, 100% { opacity: 0.2; transform: translateX(0); }
+  50% { opacity: 0.8; transform: translateX(20px); }
+}
+
+.hew-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.hew-label-camera {
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hew-label-text {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 20px var(--accent-glow);
+  white-space: nowrap;
+}
+
+.hew-label-subtitle {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 34px;
+  color: var(--text-2);
+  margin-top: 6px;
+}
+
+.hew-accent {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.hew-tag {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  background: rgba(var(--accent), 0.08);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 3px 10px;
+  opacity: 0.7;
+  z-index: 15;
+  animation: hew-fade-in 0.8s ease-out 0.6s both;
+}
+
+.hew-tag-pupil {
+  top: 28%;
+  left: 15%;
+}
+
+.hew-tag-lens {
+  top: 28%;
+  right: 15%;
+}
+
+.hew-tag-retina {
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hew-diagram {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 10;
+}
+
+.hew-diagram-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hew-diagram-icon {
+  font-size: 40px;
+}
+
+.hew-lens-icon,
+.hew-retina-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.hew-diagram-label {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.hew-diagram-arrow {
+  font-size: 32px;
+  color: var(--accent);
+  animation: hew-arrow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes hew-arrow-pulse {
+  0%, 100% { opacity: 0.5; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(6px); }
+}
+
+.hew-character {
+  position: absolute;
+  z-index: 20;
+}
+
+.hew-character {
+  right: 8%;
+  bottom: 8%;
+}
+
+/* ── Step 1: Retina cells ── */
+.hew-cells-grid {
+  position: absolute;
+  inset: 5% 10%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+}
+
+.hew-cell {
+  width: 30px;
+  height: 44px;
+  animation: hew-cell-pulse 2s ease-in-out infinite;
+}
+
+.hew-cell-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.hew-cell-0 { opacity: 0.7; }
+.hew-cell-1 { opacity: 0.9; }
+.hew-cell-2 { opacity: 0.5; }
+
+@keyframes hew-cell-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.hew-cells-label {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.hew-cells-title {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 30px var(--accent-glow);
+}
+
+.hew-cells-subtitle {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 34px;
+  color: var(--text-2);
+  margin-top: 6px;
+}
+
+.hew-funfact {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--text-mute);
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hew-character-side {
+  left: 5%;
+  bottom: 8%;
+}
+
+/* ── Step 2: Switch flipping ── */
+.hew-switch-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hew-cell-closeup {
+  width: 200px;
+  height: 260px;
+  filter: drop-shadow(0 0 15px var(--accent-glow));
+}
+
+.hew-switch {
+  animation: hew-switch-flip 1.8s ease-in-out infinite;
+  transform-origin: 100px 97px;
+}
+
+@keyframes hew-switch-flip {
+  0%, 100% { transform: translateX(0); }
+  45%, 55% { transform: translateX(12px); }
+}
+
+.hew-switch-knob {
+  animation: hew-knob-slide 1.8s ease-in-out infinite;
+}
+
+@keyframes hew-knob-slide {
+  0%, 100% { cx: 92; }
+  45%, 55% { cx: 108; }
+}
+
+.hew-switch-labels {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hew-switch-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hew-switch-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.hew-switch-dot-off {
+  background: var(--text);
+  opacity: 0.3;
+}
+
+.hew-switch-dot-on {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+  animation: hew-dot-glow 1s ease-in-out infinite;
+}
+
+@keyframes hew-dot-glow {
+  0%, 100% { box-shadow: 0 0 10px var(--accent-glow); }
+  50% { box-shadow: 0 0 20px var(--accent-glow); }
+}
+
+.hew-switch-arrow {
+  font-size: 28px;
+  color: var(--accent);
+  animation: hew-arrow-pulse 1.5s ease-in-out infinite;
+}
+
+.hew-retinal-label {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hew-retinal-name {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.hew-retinal-sub {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 34px;
+  color: var(--text-2);
+  margin-top: 6px;
+}
+
+.hew-tag-vitamin {
+  top: 38%;
+  left: 12%;
+}
+
+.hew-tag-retinal-mol {
+  top: 38%;
+  right: 12%;
+}
+
+.hew-character-corner {
+  right: 5%;
+  bottom: 5%;
+}
+
+/* ── Step 3: Signals to brain ── */
+.hew-signal-cells {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 10;
+}
+
+.hew-signal-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hew-signal-cell-svg {
+  width: 24px;
+  height: 36px;
+}
+
+.hew-signal-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  animation: hew-pulse-up 2s ease-out infinite;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes hew-pulse-up {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-200px) scale(0.3); }
+}
+
+.hew-signal-paths {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  height: 50%;
+  pointer-events: none;
+}
+
+.hew-signal-path {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, var(--accent), transparent);
+  opacity: 0.3;
+  animation: hew-path-flow 2.5s ease-out infinite;
+}
+
+@keyframes hew-path-flow {
+  0% { opacity: 0; height: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; height: 100%; }
+}
+
+.hew-brain {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 140px;
+  z-index: 10;
+}
+
+.hew-brain-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px var(--accent-glow));
+  animation: hew-brain-breathe 3s ease-in-out infinite;
+}
+
+@keyframes hew-brain-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.hew-brain-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: hew-brain-glow-pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hew-brain-glow-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.hew-brain-label {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  animation: hew-fade-in 1s ease-out 0.5s both;
+}
+
+.hew-brain-title {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.hew-brain-sub {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 34px;
+  color: var(--text-2);
+  margin-top: 6px;
+}
+
+.hew-brain-text {
+  display: block;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--accent-glow);
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.hew-tag-brain {
+  top: 12%;
+  left: 18%;
+}
+
+.hew-tag-signal {
+  top: 42%;
+  right: 15%;
+}
+
+.hew-character-bottom {
+  right: 5%;
+  bottom: 5%;
+}
+
+/* ── Shared ── */
+@keyframes hew-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Narration text ── */
+.hew-narration {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-mute);
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 600px;
+  text-align: center;
+  z-index: 30;
+  opacity: 0;
+  animation: hew-narration-appear 1s ease-out 0.8s forwards;
+}
+
+@keyframes hew-narration-appear {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── Eye image ── */
+.hew-eye-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+  z-index: 15;
+}
+
+.hew-eye-img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px var(--accent-glow));
+  animation: hew-eye-float 3s ease-in-out infinite;
+}
+
+@keyframes hew-eye-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.hew-eye-image-side {
+  bottom: 5%;
+}
+
+.hew-eye-image-corner {
+  bottom: 5%;
+}
+
+.hew-eye-image-bottom {
+  bottom: 5%;
+}

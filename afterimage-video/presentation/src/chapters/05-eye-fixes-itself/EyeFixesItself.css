@@ -1,0 +1,483 @@
+.efi-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* ─── Step 0: RPE diagram ─── */
+.efi-rpe-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.efi-rpe-diagram {
+  position: relative;
+  width: 700px;
+  height: 380px;
+  animation: efi-fade-in 0.8s ease-out;
+}
+
+.efi-rpe-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.efi-rpe-title {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 30px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out;
+  white-space: nowrap;
+}
+
+.efi-rpe-subtitle {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.3s both;
+  white-space: nowrap;
+}
+
+.efi-rpe-image {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  animation: efi-fade-in 0.8s ease-out 0.5s both;
+}
+
+.efi-rpe-img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.efi-rpe-image-label {
+  font-family: var(--font-display-en);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-top: 12px;
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.efi-rpe-label {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  fill: var(--accent);
+}
+
+.efi-layer-label {
+  font-family: var(--font-display-en);
+  font-size: 20px;
+  fill: var(--text);
+  opacity: 0.8;
+}
+
+.efi-rpe-highlight {
+  animation: efi-layer-glow 2s ease-in-out infinite;
+}
+
+@keyframes efi-layer-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* ─── Step 1: Conveyor belt recycling ─── */
+.efi-conveyor-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.efi-conveyor-label {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 30px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out;
+  white-space: nowrap;
+}
+
+.efi-conveyor-subtitle {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.3s both;
+  white-space: nowrap;
+}
+
+.efi-conveyor {
+  position: relative;
+  width: 720px;
+  height: 240px;
+}
+
+.efi-conveyor-track {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+.efi-conveyor-track::before,
+.efi-conveyor-track::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  top: -8px;
+}
+
+.efi-conveyor-track::before { left: -12px; }
+.efi-conveyor-track::after { right: -12px; }
+
+.efi-molecule {
+  position: absolute;
+  bottom: 56px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display-en);
+  font-size: 16px;
+  font-weight: 700;
+  animation: efi-conveyor-move 4s linear infinite;
+}
+
+.efi-molecule-used {
+  border: 2px solid var(--accent);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.efi-molecule-recycled {
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: var(--surface);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.efi-molecule:nth-child(2) { animation-delay: 0s; }
+.efi-molecule:nth-child(3) { animation-delay: -1s; }
+.efi-molecule:nth-child(4) { animation-delay: -2s; }
+.efi-molecule:nth-child(5) { animation-delay: -3s; }
+.efi-molecule:nth-child(6) { animation-delay: -0.5s; }
+.efi-molecule:nth-child(7) { animation-delay: -1.5s; }
+.efi-molecule:nth-child(8) { animation-delay: -2.5s; }
+.efi-molecule:nth-child(9) { animation-delay: -3.5s; }
+
+@keyframes efi-conveyor-move {
+  0% { left: -50px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 730px; opacity: 0; }
+}
+
+.efi-conveyor-zone {
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.efi-conveyor-zone-collect { left: 80px; }
+.efi-conveyor-zone-reset { left: 330px; }
+.efi-conveyor-zone-return { left: 580px; }
+
+.efi-zone-label {
+  font-family: var(--font-display-en);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.efi-zone-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.efi-zone-arrow {
+  position: absolute;
+  bottom: 100px;
+  font-family: var(--font-display-en);
+  font-size: 32px;
+  color: var(--accent);
+  opacity: 0.5;
+}
+
+.efi-zone-arrow-1 { left: 230px; }
+.efi-zone-arrow-2 { left: 480px; }
+
+/* ─── Step 2: Clock ─── */
+.efi-clock-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.efi-clock-label {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 30px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out;
+  white-space: nowrap;
+}
+
+.efi-clock-subtitle {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.3s both;
+  white-space: nowrap;
+}
+
+.efi-clock-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  animation: efi-fade-in 0.8s ease-out;
+}
+
+.efi-clock-face {
+  width: 100%;
+  height: 100%;
+}
+
+.efi-clock-hand {
+  transform-origin: 130px 130px;
+  animation: efi-clock-tick 8s linear infinite;
+}
+
+@keyframes efi-clock-tick {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.efi-clock-text {
+  font-family: var(--font-display-en);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.3s both;
+}
+
+/* ─── Step 3: Sunlight vs moonlight ─── */
+.efi-adapt-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.efi-adapt-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 0 30px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out;
+  white-space: nowrap;
+}
+
+.efi-adapt-panels {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  animation: efi-fade-in 0.8s ease-out 0.2s both;
+}
+
+.efi-adapt-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.efi-sun-icon {
+  width: 120px;
+  height: 120px;
+  animation: efi-sun-pulse 3s ease-in-out infinite;
+}
+
+.efi-moon-icon {
+  width: 120px;
+  height: 120px;
+  animation: efi-moon-glow 4s ease-in-out infinite;
+}
+
+@keyframes efi-sun-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px var(--accent-glow)); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 40px var(--accent-glow)); }
+}
+
+@keyframes efi-moon-glow {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(255,255,255,0.4)); }
+}
+
+.efi-adapt-name {
+  font-family: var(--font-display-en);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.efi-adapt-divider {
+  width: 2px;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  opacity: 0.4;
+}
+
+.efi-adapt-subtitle {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display-en);
+  font-size: 32px;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.6s both;
+  white-space: nowrap;
+}
+
+.efi-adapt-subtitle-top {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent-glow);
+  animation: efi-fade-in 0.8s ease-out 0.3s both;
+  white-space: nowrap;
+}
+
+.efi-funfact-step3 {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display-en);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  opacity: 0.5;
+  animation: efi-fade-in 0.8s ease-out 0.9s both;
+  white-space: nowrap;
+  z-index: 30;
+}
+
+/* ─── Narration ─── */
+.efi-narration {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  z-index: 30;
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-mute);
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+  animation: efi-narration-fade 0.6s ease-out 0.8s both;
+}
+
+@keyframes efi-narration-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ─── Shared ─── */
+@keyframes efi-fade-in {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

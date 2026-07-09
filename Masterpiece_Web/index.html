@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Coding Playground — Where Code Meets Creativity</title>
+  <meta name="description" content="Vibe Coding Playground — a portfolio of creative coding projects and web experiments.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-orb bg-orb--4"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-code-char" style="left: 10%; animation-delay: 0s; animation-duration: 18s;">const vibe = () => {</div>
+    <div class="bg-code-char" style="left: 30%; animation-delay: -4s; animation-duration: 22s;">AI.build(project)</div>
+    <div class="bg-code-char" style="left: 50%; animation-delay: -8s; animation-duration: 20s;">return &lt;magic /&gt;</div>
+    <div class="bg-code-char" style="left: 70%; animation-delay: -12s; animation-duration: 25s;">async function ship()</div>
+    <div class="bg-code-char" style="left: 85%; animation-delay: -6s; animation-duration: 19s;">npm run deploy</div>
+    <div class="bg-code-char" style="left: 5%; animation-delay: -14s; animation-duration: 21s;">git push origin main</div>
+    <div class="bg-code-char" style="left: 45%; animation-delay: -2s; animation-duration: 23s;">while(vibing) { code() }</div>
+    <div class="bg-code-char" style="left: 75%; animation-delay: -10s; animation-duration: 17s;">export default App</div>
+  </div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav__logo"><span>VIBE</span> CODING</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__badge">System Online</div>
+      <h1 class="hero__title">
+        Building Games<br>
+        Powered by <span class="highlight">Artificial Intelligence</span>
+      </h1>
+      <p class="hero__subtitle">
+        Building web apps and games with AI as my copilot.
+        Exploring what's possible when you let AI handle the code.
+      </p>
+      <div class="hero__actions">
+        <a href="projects.html" class="btn btn--primary">View Projects</a>
+        <a href="about.html" class="btn btn--outline">About Me</a>
+      </div>
+      <div class="hero__hint">
+        Press <span class="kbd">P</span> for projects &middot; <span class="kbd">G</span> for gallery &middot; <span class="kbd">A</span> for about
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section featured">
+    <div class="container">
+      <div class="section__header fade-in">
+        <div class="section__tag">// FEATURED PROJECTS</div>
+        <h2 class="section__title">Latest Work</h2>
+        <p class="section__desc">A selection of recent AI game experiments and prototypes.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-card__image project-card__image--sky"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Sky Touchdown</h3>
+            <p class="project-card__desc">
+              An immersive aerial game where players pilot through dynamic skies,
+              navigating obstacles and scoring touchdowns in thrilling aerial maneuvers.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Web Game</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Canvas</span>
+            </div>
+            <a href="http://localhost:3004/" target="_blank" class="project-card__link">Play Now</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-card__image project-card__image--tomato"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Tomato Clock</h3>
+            <p class="project-card__desc">
+              A clean, minimalist Pomodoro timer web app that helps you stay focused and productive.
+              Track your work sessions with a beautiful interface.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Productivity</span>
+              <span class="tag">Web App</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="http://localhost:5212/" target="_blank" class="project-card__link">Try It Now</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-card__image project-card__image--ghost"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Ghost Images</h3>
+            <p class="project-card__desc">
+              An educational video explaining the phenomenon of ghost images — those faint,
+              transparent duplicates that sometimes appear in your vision.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Video</span>
+              <span class="tag">Science</span>
+              <span class="tag">Educational</span>
+            </div>
+            <a href="http://localhost:5174/?auto=1" target="_blank" class="project-card__link">Watch Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Snippet -->
+  <section class="section">
+    <div class="container">
+      <div class="about-snippet">
+        <div class="about-snippet__text fade-in-left">
+          <h3>Hi, I'm Alden</h3>
+          <p>
+            I'm learning vibe coding with AI — using AI tools to build web apps and
+            games faster than ever. This playground is where I experiment, ship projects,
+            and discover what's possible when AI is your copilot.
+          </p>
+          <a href="about.html" class="btn btn--outline">More About Me</a>
+        </div>
+        <div class="about-snippet__visual fade-in-right">
+          <span class="about-snippet__visual-text">&lt;/&gt;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      <div class="status-bar__item"><span class="status-bar__dot"></span> Online</div>
+      <div class="status-bar__item">3 Projects</div>
+    </div>
+    <div class="status-bar__right">
+      <div class="status-bar__item">Vibe Coding v1.0</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="margin-bottom: 28px;">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Vibe Coding Playground. Built with <span>&lt;code&gt;</span> and curiosity.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matrix-rain.js"></script>
+</body>
+</html>

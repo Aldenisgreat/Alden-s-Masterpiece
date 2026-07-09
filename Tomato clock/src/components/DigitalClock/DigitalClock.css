@@ -1,0 +1,80 @@
+.digital-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.clock-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(36px, 8vw, 80px);
+  font-weight: 700;
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+}
+
+.digit-group {
+  display: flex;
+}
+
+.digit {
+  display: inline-block;
+  min-width: 0.6em;
+  text-align: center;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.clock-colon {
+  animation: colonBlink 1s ease-in-out infinite;
+  margin: 0 2px;
+}
+
+@keyframes colonBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.clock-date {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(8px, 1.8vw, 12px);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+.clock-format-btn {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.clock-format-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .clock-format-btn {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 4px;
+  }
+}

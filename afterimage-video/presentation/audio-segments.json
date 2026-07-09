@@ -1,0 +1,152 @@
+[
+  {
+    "chapter": "hook-intro",
+    "step": 1,
+    "text": "You've done this before. You stare at a light — a lamp, your phone, the sun through a window — then you look away, and there it is. Some weird glowing blob floating in your vision.",
+    "audio": "hook-intro/1.mp3"
+  },
+  {
+    "chapter": "hook-intro",
+    "step": 2,
+    "text": "It goes away after a few seconds, but... what was that? Is something wrong with your eye?",
+    "audio": "hook-intro/2.mp3"
+  },
+  {
+    "chapter": "hook-intro",
+    "step": 3,
+    "text": "Let's go inside your eye and figure it out. Turns out, the answer is pretty cool.",
+    "audio": "hook-intro/3.mp3"
+  },
+  {
+    "chapter": "how-eye-works",
+    "step": 1,
+    "text": "Okay, basics first. Your eye works kind of like a camera. Light comes in the front, goes through the lens, and hits the back wall. That back wall is called the retina.",
+    "audio": "how-eye-works/1.mp3"
+  },
+  {
+    "chapter": "how-eye-works",
+    "step": 2,
+    "text": "Your retina is covered in millions of tiny cells. Scientists call them photoreceptors, but really they're just little light-catching machines. Their job is to catch light and send a signal to your brain.",
+    "audio": "how-eye-works/2.mp3"
+  },
+  {
+    "chapter": "how-eye-works",
+    "step": 3,
+    "text": "Inside each cell, there's a molecule that changes shape when light hits it. Like a switch flipping from off to on. Scientists call it retinal — it's actually related to Vitamin A. But you can just think of it as a switch.",
+    "audio": "how-eye-works/3.mp3"
+  },
+  {
+    "chapter": "how-eye-works",
+    "step": 4,
+    "text": "That flip is what tells your brain 'hey, there's light here.' Millions of these switches flipping all day — that's how you see.",
+    "audio": "how-eye-works/4.mp3"
+  },
+  {
+    "chapter": "staring-too-long",
+    "step": 1,
+    "text": "Normally this works great. You blink, you look around, each cell gets little breaks to reset. The switches flip, new ones come in, everything's fine.",
+    "audio": "staring-too-long/1.mp3"
+  },
+  {
+    "chapter": "staring-too-long",
+    "step": 2,
+    "text": "But when you stare at something bright — like a lamp or the sun — the switches start flipping way too fast. No breaks. No time to reset.",
+    "audio": "staring-too-long/2.mp3"
+  },
+  {
+    "chapter": "staring-too-long",
+    "step": 3,
+    "text": "Eventually the cell runs out of switches. They're all used up. Now this cell can't respond to light anymore. It's basically temporarily blind.",
+    "audio": "staring-too-long/3.mp3"
+  },
+  {
+    "chapter": "staring-too-long",
+    "step": 4,
+    "text": "Your brain also gets tired of hearing the same signal over and over. So it turns down the volume on that spot. Like muting a TV that's been too loud for too long.",
+    "audio": "staring-too-long/4.mp3"
+  },
+  {
+    "chapter": "staring-too-long",
+    "step": 5,
+    "text": "So now you've got tired cells AND a brain that's ignoring them. That's where it gets interesting.",
+    "audio": "staring-too-long/5.mp3"
+  },
+  {
+    "chapter": "ghost-image",
+    "step": 1,
+    "text": "So you look away. You're staring at a white wall now. Light is hitting all your cells the same — white light, everywhere.",
+    "audio": "ghost-image/1.mp3"
+  },
+  {
+    "chapter": "ghost-image",
+    "step": 2,
+    "text": "But some cells are fresh, and some are still tired. The fresh ones are sending a strong signal. The tired ones are barely doing anything.",
+    "audio": "ghost-image/2.mp3"
+  },
+  {
+    "chapter": "ghost-image",
+    "step": 3,
+    "text": "Your brain gets this mixed message and tries to make sense of it. And what does it come up with? The ghost image. The shape of whatever you were staring at.",
+    "audio": "ghost-image/3.mp3"
+  },
+  {
+    "chapter": "ghost-image",
+    "step": 4,
+    "text": "Here's the cool part — the colors flip. Say you stared at something red. Your red-detecting cells are the ones that got tired. When you look at white light, green and blue cells work fine, but red is weak. So your brain sees what's left — cyan. The opposite of red.",
+    "audio": "ghost-image/4.mp3"
+  },
+  {
+    "chapter": "eye-fixes-itself",
+    "step": 1,
+    "text": "Don't worry — your eye can fix this. Behind your retina, there's a thin layer of cells called the Retinal Pigment Epithelium. RPE for short. It's a support layer for your photoreceptors.",
+    "audio": "eye-fixes-itself/1.mp3"
+  },
+  {
+    "chapter": "eye-fixes-itself",
+    "step": 2,
+    "text": "The RPE collects the used-up molecules, resets them, and sends them back to your photoreceptors. Same molecules, recycled over and over.",
+    "audio": "eye-fixes-itself/2.mp3"
+  },
+  {
+    "chapter": "eye-fixes-itself",
+    "step": 3,
+    "text": "This takes about 30 seconds to a couple minutes. Brighter the light, longer it takes. But it always works.",
+    "audio": "eye-fixes-itself/3.mp3"
+  },
+  {
+    "chapter": "eye-fixes-itself",
+    "step": 4,
+    "text": "And honestly, this system is pretty great. It's how your eyes adjust to both bright sunlight and dim moonlight. The afterimage is just a side effect of having eyes that can adapt like that.",
+    "audio": "eye-fixes-itself/4.mp3"
+  },
+  {
+    "chapter": "fun-extras",
+    "step": 1,
+    "text": "Fun fact — painters have known about this for a long time. They put complementary colors next to each other because they make each other look brighter. Same science.",
+    "audio": "fun-extras/1.mp3"
+  },
+  {
+    "chapter": "fun-extras",
+    "step": 2,
+    "text": "One serious thing though — don't stare at the sun. A lamp or window is fine, the afterimage goes away. But the sun can actually burn the cells in your retina. That damage can be permanent.",
+    "audio": "fun-extras/2.mp3"
+  },
+  {
+    "chapter": "fun-extras",
+    "step": 3,
+    "text": "If you want to see this for yourself, you can try it later. Stare at a bright window for ten seconds, then look at a white wall. You'll see it. And now you'll know what's actually happening.",
+    "audio": "fun-extras/3.mp3"
+  },
+  {
+    "chapter": "outro",
+    "step": 1,
+    "text": "So next time you see that ghost image after looking at something bright — don't worry. Your light-catching cells are just taking a quick nap. They'll be back in a minute.",
+    "audio": "outro/1.mp3"
+  },
+  {
+    "chapter": "outro",
+    "step": 2,
+    "text": "If you learned something, share this with a friend. See you next time.",
+    "audio": "outro/2.mp3"
+  }
+]

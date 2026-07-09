@@ -1,0 +1,273 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: background 0.5s ease;
+}
+
+/* Ocean Gradient backgrounds */
+.bg-deep-sea {
+  background: linear-gradient(180deg, #0a2342, #0d3b66, #1b6ca8, #0a2342);
+  background-size: 100% 300%;
+  animation: oceanGradient 12s ease infinite;
+}
+
+.bg-tropical {
+  background: linear-gradient(180deg, #00b4d8, #0077b6, #023e8a, #001d3d);
+  background-size: 100% 300%;
+  animation: oceanGradient 10s ease infinite;
+}
+
+.bg-sunset-ocean {
+  background: linear-gradient(180deg, #ff6b35, #e85d75, #1b6ca8, #0d3b66);
+  background-size: 100% 300%;
+  animation: oceanGradient 14s ease infinite;
+}
+
+.bg-arctic {
+  background: linear-gradient(180deg, #a8dadc, #457b9d, #1d3557, #0d1b2a);
+  background-size: 100% 300%;
+  animation: oceanGradient 11s ease infinite;
+}
+
+.bg-bioluminescent {
+  background: linear-gradient(180deg, #020122, #0a1628, #003566, #020122);
+  background-size: 100% 400%;
+  animation: oceanGradient 8s ease infinite;
+}
+
+/* Solid Ocean backgrounds */
+.bg-midnight {
+  background: #0a0e1a;
+}
+
+.bg-navy {
+  background: #0d1b2a;
+}
+
+.bg-teal {
+  background: #0a3d3d;
+}
+
+/* Animated Ocean backgrounds */
+.bg-bubbles {
+  background: linear-gradient(180deg, #0a2342, #0d3b66, #1b6ca8);
+}
+
+.bg-coral-reef {
+  background: linear-gradient(180deg, #0077b6, #023e8a, #001d3d);
+}
+
+.bg-underwater {
+  background: linear-gradient(180deg, #0d3b66, #1b6ca8, #48cae4, #0d3b66);
+  background-size: 100% 300%;
+  animation: oceanGradient 15s ease infinite;
+}
+
+.bg-aurora-ocean {
+  background: linear-gradient(180deg, #001d3d, #0353a4, #00b4d8, #90e0ef, #001d3d);
+  background-size: 100% 400%;
+  animation: oceanGradient 10s ease infinite;
+}
+
+@keyframes oceanGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Bubbles */
+.bubbles-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
+  animation: bubbleRise ease-in-out infinite;
+}
+
+@keyframes bubbleRise {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.7; }
+  50% { transform: translateY(-50vh) translateX(15px); }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(-110vh) translateX(-10px); opacity: 0; }
+}
+
+/* Coral reef - animated seaweed */
+.seaweed-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.seaweed {
+  position: absolute;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to top, #2d8a4e, #52b788);
+  border-radius: 3px 3px 0 0;
+  animation: seaweedSway ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes seaweedSway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Underwater - floating light rays */
+.light-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.light-ray {
+  position: absolute;
+  top: -10%;
+  width: 3px;
+  height: 120%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 70%);
+  transform-origin: top center;
+  animation: lightShimmer ease-in-out infinite;
+}
+
+@keyframes lightShimmer {
+  0%, 100% { opacity: 0.3; transform: rotate(-2deg); }
+  50% { opacity: 0.8; transform: rotate(2deg); }
+}
+
+/* Aurora ocean - floating color bands */
+.aurora-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.aurora-band {
+  position: absolute;
+  width: 150%;
+  height: 30px;
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: auroraWave ease-in-out infinite;
+}
+
+@keyframes auroraWave {
+  0%, 100% { transform: translateX(-10%) scaleX(1); opacity: 0.3; }
+  50% { transform: translateX(10%) scaleX(1.1); opacity: 0.6; }
+}
+
+/* Coral Reef Scene */
+.bg-pixel-coral {
+  background: linear-gradient(180deg, #0a2342 0%, #0d3b66 30%, #1b6ca8 60%, #0a4a6a 100%);
+}
+
+.coral-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Sandy bottom */
+.coral-sand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: repeating-linear-gradient(90deg, #c2a878 0px, #c2a878 8px, #b89868 8px, #b89868 16px);
+  border-top: 2px solid #d4b896;
+}
+
+/* Coral formations - image based */
+.coral-img {
+  position: absolute;
+  bottom: 18px;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+/* Seaweed - image based with waving animation */
+.coral-seaweed-img {
+  position: absolute;
+  bottom: 18px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  animation: coralSeaweedSway ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes coralSeaweedSway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Fish images */
+.coral-fish-img {
+  position: absolute;
+  left: -60px;
+  image-rendering: pixelated;
+  animation: coralFishSwim linear infinite;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.coral-fish-img--reverse {
+  left: auto;
+  right: -60px;
+  animation-name: coralFishSwimReverse;
+}
+
+@keyframes coralFishSwim {
+  0% { left: -60px; }
+  100% { left: 105%; }
+}
+
+@keyframes coralFishSwimReverse {
+  0% { right: -60px; }
+  100% { right: 105%; }
+}
+
+/* Bubbles in coral scene */
+.coral-bubble {
+  position: absolute;
+  bottom: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(200, 230, 255, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: coralBubbleRise ease-in infinite;
+}
+
+@keyframes coralBubbleRise {
+  0% { bottom: 30px; opacity: 0; transform: translateX(0); }
+  10% { opacity: 0.8; }
+  50% { bottom: 50vh; transform: translateX(10px); }
+  90% { opacity: 0.4; }
+  100% { bottom: 100vh; opacity: 0; transform: translateX(-5px); }
+}
