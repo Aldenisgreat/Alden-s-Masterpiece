@@ -95,7 +95,7 @@ export default function VirtualPet({ mood, action, isSwimming, hearts, feedMessa
         style={{ cursor: 'pointer' }}
       >
         <img
-          src="/assets/dolphin_ref.webp"
+          src="./assets/dolphin_ref.webp"
           alt="pixel dolphin"
           className="pet-sprite-img"
           style={{
