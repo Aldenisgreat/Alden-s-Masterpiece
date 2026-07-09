@@ -169,9 +169,9 @@ function Fence({ start, end }: { start: [number, number, number]; end: [number, 
 // ============================================================
 
 const MODEL_PATHS = [
-  '/models/buildings/Building_Large_2.gltf',
-  '/models/buildings/Building_Medium_2_001.gltf',
-  '/models/buildings/Building_Small_1.gltf',
+  './models/buildings/Building_Large_2.gltf',
+  './models/buildings/Building_Medium_2_001.gltf',
+  './models/buildings/Building_Small_1.gltf',
 ]
 
 function CityBuildingInstances() {
