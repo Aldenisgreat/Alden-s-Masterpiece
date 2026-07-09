@@ -70,7 +70,7 @@ export default function Background({ backgroundClass }: BackgroundProps) {
     fishes: Array.from({ length: 8 }, (_, i) => ({
       id: i,
       y: 10 + Math.random() * 50,
-      src: `/assets/fish/peixinhos${i + 1}.png`,
+      src: `./assets/fish/peixinhos${i + 1}.png`,
       speed: 10 + Math.random() * 8,
       delay: Math.random() * 12,
       size: 36 + Math.random() * 24,
