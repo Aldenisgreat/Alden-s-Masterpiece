@@ -21,7 +21,7 @@ export default function HookIntro({ step }: ChapterStepProps) {
         {/* Desk lamp - custom image */}
         <div className="hi-lamp">
           <img
-            src="/light.png"
+            src="./light.png"
             alt="Bright light"
             className="hi-lamp-img"
           />
@@ -31,7 +31,7 @@ export default function HookIntro({ step }: ChapterStepProps) {
         {/* Character looking at light */}
         <div className="hi-character-step0">
           <img
-            src="/character-1.png"
+            src="./character-1.png"
             alt="Character"
             className="hi-character-img"
           />
@@ -63,7 +63,7 @@ export default function HookIntro({ step }: ChapterStepProps) {
         {/* Character looking at wall */}
         <div className="hi-character-step1">
           <img
-            src="/character-1.png"
+            src="./character-1.png"
             alt="Character"
             className="hi-character-img hi-character-img-flipped"
           />

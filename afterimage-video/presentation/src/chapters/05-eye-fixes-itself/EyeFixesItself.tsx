@@ -10,7 +10,7 @@ export default function EyeFixesItself({ step }: ChapterStepProps) {
           <div className="efi-rpe-title">MEET THE RPE</div>
           <div className="efi-rpe-subtitle">Retinal Pigment Epithelium</div>
           <div className="efi-rpe-image">
-            <img src="/rpe.png" alt="RPE Layer" className="efi-rpe-img" />
+            <img src="./rpe.png" alt="RPE Layer" className="efi-rpe-img" />
             <div className="efi-rpe-image-label">RPE Layer</div>
           </div>
 

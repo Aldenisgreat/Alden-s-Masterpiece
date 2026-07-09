@@ -68,7 +68,7 @@ export default function HowEyeWorks({ step }: ChapterStepProps) {
 
         {/* Eye image */}
         <div className="hew-eye-image">
-          <img src="/eye.png" alt="Eye" className="hew-eye-img" />
+          <img src="./eye.png" alt="Eye" className="hew-eye-img" />
         </div>
 
         <span className="hew-narration">"Okay, basics first. Your eye works kind of like a camera. Light comes in the front, goes through the lens, and hits the back wall."</span>
@@ -104,7 +104,7 @@ export default function HowEyeWorks({ step }: ChapterStepProps) {
 
         {/* Eye image */}
         <div className="hew-eye-image hew-eye-image-side">
-          <img src="/eye.png" alt="Eye" className="hew-eye-img" />
+          <img src="./eye.png" alt="Eye" className="hew-eye-img" />
         </div>
 
         <span className="hew-narration">"Your retina is covered in millions of tiny cells. Scientists call them photoreceptors, but really they're just little light-catching machines."</span>
@@ -156,7 +156,7 @@ export default function HowEyeWorks({ step }: ChapterStepProps) {
 
         {/* Eye image */}
         <div className="hew-eye-image hew-eye-image-corner">
-          <img src="/eye.png" alt="Eye" className="hew-eye-img" />
+          <img src="./eye.png" alt="Eye" className="hew-eye-img" />
         </div>
 
         <span className="hew-narration">"Inside each cell, there's a molecule that changes shape when light hits it. Like a switch flipping from off to on."</span>
@@ -226,7 +226,7 @@ export default function HowEyeWorks({ step }: ChapterStepProps) {
 
       {/* Eye image */}
       <div className="hew-eye-image hew-eye-image-bottom">
-        <img src="/eye.png" alt="Eye" className="hew-eye-img" />
+        <img src="./eye.png" alt="Eye" className="hew-eye-img" />
       </div>
 
       <span className="hew-narration">"That flip is what tells your brain 'hey, there's light here.' Millions of these switches flipping all day — that's how you see."</span>

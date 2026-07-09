@@ -49,7 +49,7 @@ export default function FunExtras({ step }: ChapterStepProps) {
         </div>
 
         <div className="fe-monet-container">
-          <img src="/monet.png" alt="Monet's Water Lilies" className="fe-monet-img" />
+          <img src="./monet.png" alt="Monet's Water Lilies" className="fe-monet-img" />
           <div className="fe-monet-label">Monet's Water Lilies</div>
         </div>
 

@@ -18,7 +18,7 @@ export default function GhostImage({ step }: ChapterStepProps) {
         </div>
 
         <div className="gi-light-image">
-          <img src="/light2.png" alt="Light source" className="gi-light-img" />
+          <img src="./light2.png" alt="Light source" className="gi-light-img" />
         </div>
 
         <div className="gi-white-label">WHITE LIGHT EVERYWHERE</div>

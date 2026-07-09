@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="app">
-      <audio ref={audioRef} src="/assets/music.mp3" preload="auto" />
+      <audio ref={audioRef} src="./assets/music.mp3" preload="auto" />
       <Background backgroundClass={bgConfig.className} />
       <main className="main-content">
         <DigitalClock
